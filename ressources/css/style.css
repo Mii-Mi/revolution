@@ -1,0 +1,61 @@
+/* FONTS
+################################# */
+
+@font-face{
+    font-family: "Beast";
+    src: url(../fonts/BEAST___.TTF);
+}
+@font-face{
+    font-family: "sweet Hipster";
+    src: url(../fonts/Sweet\ Hipster.ttf);
+}
+
+/* GLOBAL
+################################# */
+
+body, html, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url("../images/revo_bg.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 10px;
+    color: lightgoldenrodyellow;
+}
+h1, h2{
+    
+    color: rgb(228, 228, 0);
+    text-align: center;
+    font-weight: lighter;
+
+}
+h1{
+    font-family: "Beast", serif;
+    font-size: 4em;
+}
+h2{
+    font-family: "sweet Hipster", serif;
+    font-size: 4em;
+}
+a{
+    text-decoration: none;
+    color: rgb(253, 253, 98);
+}
+a:hover{
+    color: rgb(228, 228, 0);
+    text-shadow: 0 0 2px lightgoldenrodyellow;
+}
+.bloc{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+
+/* ACCUEIL
+################################# */
+
+.prez{
+    margin-top: 20em;
+    text-align: center;
+}
