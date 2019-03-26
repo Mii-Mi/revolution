@@ -3,20 +3,80 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>En marge !</title>
+    <title>Les medias indépendants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="ressources/css/stellarnav.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="ressources/css/style.css">
-    <script src="main.js"></script>
 </head>
 <body>
     <header>
+        <nav class="stellarnav">
+            <ul>
+                <li class="mega" data-columns="4"><a href="">Dropdown</a>
+                    <ul>
+                        <li><a href="#">Item1</a></li>
+                        <li><a href="#">Item2</a></li>
+                        <li><a href="#">Item3</a></li>
+                        <li><a href="#">Item4</a></li>
+                        <li><a href="#">Item5</a></li>
+                        <li><a href="#">Item6</a></li>
+                        <li><a href="#">Item7</a></li>
+                        <li><a href="#">Item8</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a></li>
+                <li><a href="">Item 5</a></li>
+                <li><a href="">Item 6</a></li>
+                <li class="drop-left"><a href="">Drop Left</a>
+                    <ul>
+                        <li><a href="#">How deep?</a>
+                            <ul>
+                                <li><a href="#">Deep</a>
+                                    <ul>
+                                        <li><a href="#">Even deeper</a>
+                                            <ul>
+                                                <li><a href="#">Item</a></li>
+                                                <li><a href="#">Item</a></li>
+                                                <li><a href="#">Item</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <h1>La Démocratie En Marche !</h1>
-        
-        <h2>(Parce que c'est notre projet)</h2>
-        <div class="prez bloc">
-            <h3>Site dédié au regroupement des informations provenant de médias libres et indépendants.</h3>
-            <p>En France, <a href="ressources/images/media_owner_map.png">10 milliardaires contrôlent notre information</a>. Impossible de passer une journée sans lire, entendre ou regarder un de leur porte-voix. Pourquoi de grands industriels milliardaires investissent-ils, souvent à perte, dans le secteur des médias ?</p>
-        </div>
     </header>
+    <section class="prez">
+        <h2>(Rien n'arrête une idée dont le temps est venu)</h2>
+        <div class="bloc">
+            <h3>Site dédié au regroupement des informations provenant de médias libres et indépendants.</h3>
+            <p>En France, <a href="ressources/images/media_owner_map.png">10 milliardaires contrôlent notre information</a>. Impossible de passer une journée sans lire, entendre ou regarder un de leur porte-voix.</p>
+            <p>L’exposition de la vérité est affaire complexe, et la capacité à dire et se saisir du réel ne cesse de se dégrader.</p>
+            <p>Nous nous proposons de centraliser ici les nombreux médias indépendants qui fleurissent sur le net et les réseaux sociaux.<br />
+                Nous ne recherchons pas ici à être exhaustifs, et nous omettrons volontairement les sites les plus ambigüs de par leur proximité avec des mouvances plus ou moins partiellement contestables, ceci afin de renforcer la crédibilité du partage de l'information.</p>
+        </div>
+        <p><a class="button" href="view/frontend_view/gallery.html">Entrer</a></p>
+    </section>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript" src="ressources/js/stellarnav.min.js"></script>
+    <script type="text/javascript" src="ressources/js/stellarnav.conf.js"></script>
 </body>
 </html>
