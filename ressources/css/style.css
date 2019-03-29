@@ -77,6 +77,10 @@ a:hover{
     color: unset;
     text-shadow: unset;
 }
+footer{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* ACCUEIL
 ################################# */
@@ -97,7 +101,7 @@ a:hover{
 .galCont{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-gap: 15px;
     margin-top: 2em;
 }
@@ -106,6 +110,10 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition-duration: 0.3s;
+}
+article:hover{
+    transform: scale(1.02);
 }
 figcaption{
     text-align: center;
@@ -121,7 +129,33 @@ figcaption{
 }
 .social img{
     width: 50px;
+    transition-duration: 1s;
 }
-.tView figure img{
-    width: 150px;
+.social p:hover img{
+    transform: rotateY(180deg);
+}
+article figure img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1240px){
+
+    /*GALLERY
+    ################################# */
+
+    .galCont{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    h1, h2{
+        font-family: serif;
+        font-size: 2.5em;
+    }
+
 }
