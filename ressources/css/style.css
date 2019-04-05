@@ -35,8 +35,16 @@
 .modal[aria-hidden="true"]{
     animation-name: fadeOut;
 }
-.modal[aria-hidden="true"] .modal-wrapper{
+.modal[aria-hidden="true"] .modal-wrapper,
+.modal[aria-hidden="true"] .modal-wrapper2 {
     animation-name: slideToBottom;
+}
+.modal-wrapper2{
+    width: 900px;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    padding: 20px;
+    animation: slideFromTop .5s both;
 }
 
 @keyframes fadeIn{

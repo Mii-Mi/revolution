@@ -3,11 +3,20 @@ session = sessionStorage.getItem('connect');
 
 // Admin menu hidden at start 
 const admin = document.getElementById('admin');
-const adm = ('<a>Admin</a><ul><li><a href="#">Articles</a><ul><li><a href="#">Membres</a><ul><li><a href="#">stats</a><ul><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul>');
+const adm = ('<a>Admin</a><ul><li><a href="#">Articles</a><ul><li><a href="#">Membres</a><ul><li><a href="#">stats</a><ul><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#modal2" class="js-modal">Ajouter article</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul>');
 localStorage.setItem('adminPanel', adm);
+
+if (session === "true"){
+    admin.innerHTML = localStorage.getItem('adminPanel');
+    jQuery(document).ready(function ($) {
+        jQuery('.stellarnav').stellarNav();
+    });
+}
+
 
 // Modal 
 // ####################################################
+
 let modal = null;
 
 const openModal = function(e){
@@ -42,6 +51,7 @@ const stopPropagation = function (e){
 
 document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal);
+    console.log(a);
 })
 
 window.addEventListener('keydown', function(e){
