@@ -25,13 +25,15 @@ const openModal = function(e){
 const closeModal = function (e){
     if (modal === null) return;
     e.preventDefault();
-    modal.style.display = "none";
+    window.setTimeout(function(){
+        modal.style.display = "none";
+        modal = null;
+    }, 500);
     modal.setAttribute('aria-hidden', 'true');
     modal.removeAttribute('aria-modal');
     modal.removeEventListener('click', closeModal);
     modal.querySelector('.js-modal-close').removeEventListener('click', closeModal);
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation);
-    modal = null;
 }
 
 const stopPropagation = function (e){
@@ -66,22 +68,18 @@ if (session === 'true'){
 }
 
 // events
-// connect.onclick = co;
 
 disconnect.onclick = disc;
 
 // Connect function
 
-//const linkCo = document.getElementById('linkCo');
 const logForm = document.querySelector('#login-form');
 logForm.addEventListener('submit', co)
 
- function co(e) {
-//     let mdp = prompt('entrez votre mot de passe');
-let mdp = document.getElementById('pass');
+function co(e) {
+    let mdp = document.getElementById('pass');
     
     if (mdp.value === 'Castaner') {
-        //linkCo.removeAttribute('href');
         connect.style.display = 'none';
         admin.style.display = 'inline-block';
 

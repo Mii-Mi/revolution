@@ -30,7 +30,7 @@
 
                 <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="gallery.html">Galerie</a></li>
-                <li id="connect"><a id="linkCo" href="">Connexion</a></li>
+                <li id="connect"><a id="linkCo" class="js-modal" href="#modal1">Connexion</a></li>
                 <li id="deco"><a id="linkDeco" href="">Déconnexion</a></li>
                 <li id="admin" class="drop-left">
                 </li>
@@ -38,6 +38,15 @@
         </nav>
         <h1>Proprietaires des medias en France</h1>
     </header>
+    <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+        <div class="modal-wrapper bloc js-modal-stop">
+            <form id="login-form">
+                <p>Entrez votre mot de passe</p>
+                <p><input type="password" name="pass" id="pass" /></p>
+                <p><input type="submit" value="Envoyer" /><button class="js-modal-close">Annuler</button></p>
+            </form>
+        </div>
+    </aside>
     <section>
         <p><img class="map" src="../../ressources/images/media_owner_map.png" alt="carte propriétaires medias" /></p>
     </section>
