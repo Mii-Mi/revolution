@@ -93,7 +93,7 @@ function co(e) {
         sessionStorage.setItem('connect', true);
 
         //Close modal
-        closeModal();
+        closeModal(e);
 
     } else {
         alert('Mdp invalide');
