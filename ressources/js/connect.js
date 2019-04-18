@@ -3,7 +3,7 @@ session = sessionStorage.getItem('connect');
 
 // Admin menu hidden at start 
 const admin = document.getElementById('admin');
-const adm = ('<a>Admin</a><ul><li><a href="#">Articles</a><ul><li><a href="#">Membres</a><ul><li><a href="#">stats</a><ul><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#modal2" class="js-modal">Ajouter article</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul>');
+const adm = ('<a>Admin</a><ul><li><a href="#">Articles</a><ul><li><a href="#">Membres</a><ul><li><a href="#">stats</a><ul><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul></li><li><a id="addArticleLink" href="#modal2" class="js-modal">Ajouter article</a></li><li><a href="#">Item</a></li><li><a href="#">Item</a></li></ul>');
 localStorage.setItem('adminPanel', adm);
 
 if (session === "true"){
@@ -11,6 +11,13 @@ if (session === "true"){
     jQuery(document).ready(function ($) {
         jQuery('.stellarnav').stellarNav();
     });
+
+    let attr = admin.getElementsByClassName('js-modal');
+    fun = function(){
+        attr.setAttribute('href', '#modal2');
+    }
+    fun;
+    
 }
 
 
