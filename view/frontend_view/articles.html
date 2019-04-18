@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Carte des medias</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="../../ressources/css/stellarnav.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../ressources/css/style.css">
+    <link rel="stylesheet" href="../../ressources/css/style.css">
+    <title>Articles</title>
     <link href="../../favicon.ico" rel="icon">
 </head>
 <body>
@@ -29,16 +29,15 @@
                     </ul>
                 </li>
 
-                <li><a href="../frontend_view/articles.html"></a></li>
                 <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="gallery.html">Galerie</a></li>
-                <li id="connect"><a id="linkCo" class="js-modal" href="#modal1">Connexion</a></li>
+                <li id="connect"><a class="js-modal" href="#modal1">Connexion</a></li>
                 <li id="deco"><a id="linkDeco" href="">Déconnexion</a></li>
                 <li id="admin" class="drop-left">
                 </li>
             </ul>
         </nav>
-        <h1>Proprietaires des medias en France</h1>
+        <h1>articles</h1>
     </header>
     <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
         <div class="modal-wrapper bloc js-modal-stop">
@@ -49,12 +48,16 @@
             </form>
         </div>
     </aside>
-    <section>
-        <p><img class="map" src="../../ressources/images/media_owner_map.png" alt="carte propriétaires medias" /></p>
+    <section id="cont"  class="galCont">
     </section>
+    <footer class="foot">
+        <p>Cecile 2019</p>
+        <p><a href="mailto:peigne.cecile@free.fr">Contact</a></p>
+    </footer>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script type="text/javascript" src="../../ressources/js/stellarnav.min.js"></script>
     <script type="text/javascript" src="../../ressources/js/stellarnav.conf.js"></script>
     <script type="text/javascript" src="../../ressources/js/connect.js"></script>
-</body>
+    <script type="text/javascript" src="../../ressources/js/scrapNews.js"></script>
+    </body>
 </html>
