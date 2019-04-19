@@ -1,80 +1,5 @@
-function scrap(){
-    var links = [];
-    var casper = require('casper').create({
-        verbose: false,
-        logLevel: 'debug',
-        pageSettings: {
-            loadImages: false,
-            loadPlugins: false,
-            javascriptEnabled: true,
-            customHeaders:{
-                userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0'
-            }
-        }
-    });
 
-    var url = 'https://www.acrimed.org/spip.php?page=archives',
-        title = [],
-        link = [],
-        img = [],
-        desc = [],
-        arrJson = [],
-        fs = require('fs');
-
-    function getTitle(){
-        var title = document.querySelectorAll('h3');
-        return Array.prototype.map.call(title, function(e){
-            return e.innerText;
-        });
-    }
-    function getLink(){
-        var link = document.querySelectorAll('a');
-        return Array.prototype.map.call(link, function(e){
-            return e.innerText;
-        });
-    }
-    function getImg(){
-        var img = document.querySelectorAll('.logo-right');
-        return Array.prototype.map.call(img, function(e){
-            return e.getAttribute('style').slice;
-        });
-    }
-    function getDesc(){
-        var desc = document.querySelectorAll('h3');
-        return Array.prototype.map.call(desc, function(e){
-            return e.innerText;
-        });
-    }
-    function createJSON(){
-        for (i = 0; i < title.length; i++){
-            arrJson.push({
-                title: title[i],
-                link: link[i],
-                img: img[i],
-                desc: desc[i],
-                social:{
-                    facebook: 'https://www.facebook.com/pages/Acrimed-Action-Critique-M%C3%A9dias/94089796249',
-                    twitter: 'https://twitter.com/acrimed_info'
-                }
-            });
-        }
-        return JSON.stringify(arrJson);
-    };
-    
-    casper.start(url, function(){
-        this.echo('Start ...');
-    });
-
-    casper.waitForSelector('section',
-    function(){
-        console.log('... The page is loaded ...');
-    });
-
-    mkDom();
-}
-
-function mkDom(){
-    var requestURL = 'news.json';
+var requestURL = '../../ressources/js/result.json';
     var request = new XMLHttpRequest();
 
     request.open('GET', requestURL);
@@ -105,10 +30,8 @@ function mkDom(){
         
         newArt.innerHTML = `
             <a class="link-publi" href="${this.link}">
-                <figure>
-                    <figcaption class="title-publi">${this.title}</figcaption>
-                    <img class="img-publi" src="${this.img}" alt="logo" />
-                </figure>
+                <h3 class="title-publi">${this.title}</h3>
+                <img class="img-publi" src="${this.img}" alt="logo" />
             </a>
             <p class="descr-publi">${this.desc}</p>
 
@@ -131,6 +54,3 @@ function mkDom(){
             articles[i].displayArticle();
         }
     };
-}
-
-scrap();

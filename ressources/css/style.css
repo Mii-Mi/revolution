@@ -203,7 +203,7 @@ figcaption{
 .social p:hover img{
     transform: rotateY(180deg);
 }
-article figure img{
+article img, article figure img{
     display: block;
     margin: auto;
     max-width: 100%;
